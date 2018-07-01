@@ -4,7 +4,7 @@ import ProfileWrapper from './components/profile/ProfileWrapper.vue';
 import Profile from './components/profile/Profile.vue';
 import EditProfile from './components/profile/edit-profile/EditProfile.vue';
 import EditPassword from './components/profile/edit-password/EditPassword.vue';
-
+import task from './components/taskcomponent.vue';
 export default [
 	{
 		path: '/',
@@ -16,6 +16,12 @@ export default [
 		path: '/login',
 		name: 'login',
 		component: Login,
+		meta: {requiresGuest: true}
+	},
+	{
+		path: '/task',
+		name: 'project',
+		component: task,
 		meta: {requiresGuest: true}
 	},
 	{
