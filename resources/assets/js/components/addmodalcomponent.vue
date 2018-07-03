@@ -18,7 +18,6 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" @click="clearmodal" data-dismiss="modal">
                                     Close</button>
-                        <button type="button" class="btn btn-primary" @click="addRecord">Save Changes</button>
                     </div>
                 </div>
             </div>
