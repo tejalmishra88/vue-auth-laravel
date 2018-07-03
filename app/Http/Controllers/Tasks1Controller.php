@@ -9,7 +9,7 @@ class Tasks1Controller extends Controller
     //
     public function getnames() 
     { 
-       return task::all();
+       return tasks1::all();
     
     }
 }
