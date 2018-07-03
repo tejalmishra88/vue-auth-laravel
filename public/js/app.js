@@ -36632,6 +36632,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -36683,10 +36684,6 @@ var render = function() {
             })
           ),
           _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _vm._v("\n                   worker list\n                ")
-          ]),
-          _vm._v(" "),
           _vm._m(2)
         ])
       ])
@@ -36701,6 +36698,10 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-header" }, [
       _c("h2", [_vm._v("all todo task")]),
       _c("span", { staticClass: "pull-right" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _vm._v("\n                   worker list")
+        ]),
+        _vm._v(" "),
         _c(
           "a",
           {
@@ -36716,19 +36717,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "pull-right" }, [
-      _c("button", [_vm._v("add")]),
-      _vm._v(" | "),
-      _c("button", [_vm._v("delete")]),
+    return _c("span", { staticClass: "text-right" }, [
+      _c("button", { staticClass: "btn btn-success" }, [_vm._v("add")]),
       _vm._v(" | \n                            "),
-      _c("button", [_vm._v("preview")])
+      _c("button", { staticClass: "btn btn-primary" }, [_vm._v("delete")]),
+      _vm._v(" | \n                            "),
+      _c("button", { staticClass: "btn btn-danger" }, [_vm._v("preview")])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-footer" }, [
+    return _c("div", { staticClass: "card-footer text-right" }, [
       _c("small", [_vm._v("company xyz")])
     ])
   }

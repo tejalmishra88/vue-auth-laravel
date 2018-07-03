@@ -3,16 +3,17 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header"><h2>all todo task</h2><span class="pull-right"><a class="btn btn-success btn-xs" data-toggle="modal" href="#addmodal">+</a></span> </div>
+                    <div class="card-header"><h2>all todo task</h2><span class="pull-right">
+                        <div class="card-body">
+                       worker list</div>
+                        <a class="btn btn-success btn-xs" data-toggle="modal" href="#addmodal">+</a></span> </div>
                      <ul class="list-group">
                             <li class="list-group-item"  v-for= "t in tasks">{{ t.id }} - {{ t.name }} 
-                                <span class="pull-right"><button>add</button> | <button>delete</button> | 
-                                <button>preview</button></span> </li>
+                                <span class="text-right"><button class="btn btn-success">add</button> | 
+                                <button class="btn btn-primary">delete</button> | 
+                                <button class="btn btn-danger">preview</button></span> </li>
                         </ul>
-                    <div class="card-body">
-                       worker list
-                    </div>
-                    <div class="card-footer"><small>company xyz</small></div>
+                    <div class="card-footer text-right"><small>company xyz</small></div>
                 </div>
             </div>
         </div>
