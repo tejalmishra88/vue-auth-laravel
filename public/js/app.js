@@ -36655,7 +36655,7 @@ Vue.component('addtask', __webpack_require__(98));
     created: function created() {
         var _this = this;
 
-        axios.get('http://127.0.0.1:8000/tasks').then(function (response) {
+        axios.get('http://127.0.0.1:8000/tasks/getnames').then(function (response) {
             _this.tasks = response.data;
             console.log('response-created', response);
         }).catch(function (error) {
@@ -37402,7 +37402,7 @@ exports = module.exports = __webpack_require__(79)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -37413,13 +37413,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -37479,67 +37472,32 @@ var render = function() {
   return _c("div", { staticClass: "modal fade", attrs: { id: "addmodal" } }, [
     _c("div", { staticClass: "modal-dialog" }, [
       _c("div", { staticClass: "modal-content" }, [
-        _c("div", { staticClass: "modal-header" }, [
-          _c(
-            "button",
-            {
-              staticClass: "close",
-              attrs: {
-                type: "button",
-                "data-dismiss": "modal",
-                "aria-hidden": "true"
-              },
-              on: { click: _vm.clearmodal }
-            },
-            [_vm._v("×\n                      ")]
-          ),
-          _vm._v(" "),
-          _c("h4", { staticClass: "modal-title" }, [_vm._v("Add New Record!")])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "modal-body" }, [
-          _vm.success.length > 0
-            ? _c("p", { staticClass: "alert alert-success" }, [
-                _vm._v(_vm._s(_vm.success))
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "name" } }, [_vm._v("add new task")]),
-          _vm._v(" "),
-          _c("textarea", {
-            directives: [
+        _c(
+          "div",
+          { staticClass: "modal-header" },
+          [
+            _c(
+              "button",
               {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.record,
-                expression: "record"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { name: "name", id: "name" },
-            domProps: { value: _vm.record },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.record = $event.target.value
-              }
-            }
-          }),
-          _vm._v(" "),
-          _vm.errors.name
-            ? _c(
-                "ul",
-                { staticClass: "list-unstyled" },
-                _vm._l(_vm.errors.name, function(err) {
-                  return _c("li", { staticClass: "alert alert-danger" }, [
-                    _vm._v(_vm._s(err))
-                  ])
-                })
-              )
-            : _vm._e()
-        ]),
+                staticClass: "close",
+                attrs: {
+                  type: "button",
+                  "data-dismiss": "modal",
+                  "aria-hidden": "true"
+                },
+                on: { click: _vm.clearmodal }
+              },
+              [_vm._v("×\n                      ")]
+            ),
+            _vm._v(" "),
+            _vm._l(_vm.errors.name, function(err) {
+              return _c("li", { staticClass: "alert alert-danger" }, [
+                _vm._v(_vm._s(err))
+              ])
+            })
+          ],
+          2
+        ),
         _vm._v(" "),
         _c("div", { staticClass: "modal-footer" }, [
           _c(

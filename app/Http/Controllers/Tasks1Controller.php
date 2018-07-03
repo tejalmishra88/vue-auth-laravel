@@ -12,4 +12,15 @@ class Tasks1Controller extends Controller
        return tasks1::all();
     
     }
+
+public function savenames(Request $request)
+{ 
+    $todo = todo::create($request->all());
+    if($todo)
+    {   
+        $tasks =todo::all();
+        return request()->json(200,$tasks);
+      // return "tejal";
+    }
+}
 }

@@ -5,13 +5,6 @@
                     <div class="modal-header">
                         <button type="button" class="close" @click="clearmodal" data-dismiss="modal" aria-hidden="true">&times;
                           </button>
-                        <h4 class="modal-title">Add New Record!</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p class="alert alert-success" v-if="success.length > 0">{{ success}}</p>
-                        <label for="name">add new task</label>
-                        <textarea name="name" id="name" class="form-control" v-model="record"></textarea>
-                        <ul v-if="errors.name" class="list-unstyled">
                             <li v-for="err of errors.name" class="alert alert-danger">{{ err }}</li>
                         </ul>
                     </div>

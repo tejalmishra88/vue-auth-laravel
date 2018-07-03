@@ -37,7 +37,7 @@ Vue.component('addtask', require('./addmodalcomponent.vue'));
         },
         },
         created() {
-             axios.get('http://127.0.0.1:8000/tasks')
+             axios.get('http://127.0.0.1:8000/tasks/getnames')
         .then((response) => {this.tasks = response.data;
         console.log('response-created', response);
         }
