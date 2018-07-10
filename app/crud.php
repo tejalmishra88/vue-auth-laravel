@@ -4,8 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class tasks1 extends Model
+class crud extends Model
 {
     //
-    protected $fillable =['name'];
 }

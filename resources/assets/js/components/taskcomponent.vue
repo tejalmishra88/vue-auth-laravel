@@ -26,7 +26,7 @@
                 }},
         methods:{},
         created() {
-             axios.get('http://127.0.0.1:8000/tasks')
+             axios.get('http://127.0.0.1:8000/api/getnames2')
         .then((response) => {this.tasks = response.data;
         console.log('response-created', response);
         }

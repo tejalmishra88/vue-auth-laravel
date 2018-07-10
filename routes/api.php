@@ -11,13 +11,13 @@
 |
 */
 
-Route::post('
-', 'AuthenticateController@authenticate');
+Route::post('authenticate', 'AuthenticateController@authenticate');
+Route::get('getnames1', 'Tasks1Controller@getnames');
 
 Route::group(['middleware' => 'jwt.auth'], function()
 {
     Route::get('user', 'UserController@show');
- //   Route::get('taskss', 'tasks1controller@getnames');
+    Route::get('getnames2', 'Tasks1Controller@getnames');
     Route::post('user/profile/update', 'UserController@updateProfile');
     Route::post('user/password/update', 'UserController@updatePassword');
 });

@@ -7,14 +7,8 @@ import EditPassword from './components/profile/edit-password/EditPassword.vue';
 import task from './components/taskcomponent.vue';
 export default [
 	{
-		path: '/',
-		name: 'index',
-		component: Home,
-		meta: {}
-	},
-	{
-		path: '/login',
-		name: 'login',
+		path: '/', name: 'index', component: Home,meta: {}},
+	{	path: '/login',name: 'login',
 		component: Login,
 		meta: {requiresGuest: true}
 	},
