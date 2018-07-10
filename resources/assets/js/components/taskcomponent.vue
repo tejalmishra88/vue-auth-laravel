@@ -21,12 +21,12 @@
 </template>
 
 <script>
+import * as api from './../config';
     export default {
-        data(){return{tasks:{},
-                }},
+        data(){return{tasks:{},}},
         methods:{},
         created() {
-             axios.get('http://127.0.0.1:8000/api/getnames2')
+             axios.get(getnames1)
         .then((response) => {this.tasks = response.data;
         console.log('response-created', response);
         }
