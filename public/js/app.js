@@ -492,6 +492,7 @@ module.exports = {
 var apiDomain = Laravel.apiDomain;
 var siteName = Laravel.siteName;
 
+//export const getnames1= apiDomain + '/getnames1';
 var api = {
 	login: apiDomain + '/authenticate',
 	currentUser: apiDomain + '/user',
@@ -36640,7 +36641,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     created: function created() {
         var _this = this;
 
-        axios.get(getnames1).then(function (response) {
+        axios.get(__WEBPACK_IMPORTED_MODULE_0__config__["a" /* api */].getnames1).then(function (response) {
             _this.tasks = response.data;
             console.log('response-created', response);
         }).catch(function (error) {
