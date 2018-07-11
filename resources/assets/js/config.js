@@ -8,4 +8,5 @@ export const api = {
 	updateUserProfile: apiDomain + '/user/profile/update',
 	updateUserPassword: apiDomain + '/user/password/update',
 	getnames1: apiDomain + '/getnames1',
+	saves1: apiDomain + '/savenames',
 };

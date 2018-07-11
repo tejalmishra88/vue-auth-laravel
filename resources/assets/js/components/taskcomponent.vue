@@ -17,14 +17,28 @@
                 </div>
             </div>
         </div>
+        <div id ="modal">
+             <addtask @recordadded="refreshRecord"></addtask>
+              </div>
     </div>
 </template>
 
 <script>
+import addmodal from './addmodalcomponent.vue'
+//Vue.component('addtask', require('./addmodalcomponent.vue'));
 import * as apii from './../config';
     export default {
+        components: {
+			'addtask': addmodal
+		},
         data(){return{tasks:{},}},
-        methods:{},
+        methods:{
+
+             refreshRecord(datafromadd)
+               {// console.log('taskcomponent--refrerecord=',datafromadd);
+                // this.tasks= datafromadd;
+                },
+        },
         created() {
              axios.get(apii.api.getnames1)
         .then((response) => {this.tasks = response.data;

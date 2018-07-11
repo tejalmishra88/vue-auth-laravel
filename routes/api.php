@@ -13,6 +13,7 @@
 
 Route::post('authenticate', 'AuthenticateController@authenticate');
 Route::get('getnames1', 'Tasks1Controller@getnames');
+Route::post('saves1', 'tasks1controller@savenames');
 
 Route::group(['middleware' => 'jwt.auth'], function()
 {

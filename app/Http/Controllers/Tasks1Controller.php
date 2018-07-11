@@ -15,12 +15,9 @@ class Tasks1Controller extends Controller
 
 public function savenames(Request $request)
 { 
-    $todo = todo::create($request->all());
-    if($todo)
-    {   
-        $tasks =todo::all();
-        return request()->json(200,$tasks);
-      // return "tejal";
+   
+    {   $todo3 = tasks1::create($request->all());
+        if($todo3) { return tasks1::all();   }
     }
 }
 }
