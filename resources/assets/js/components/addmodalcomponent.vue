@@ -25,15 +25,31 @@
         </div>
 </template>
 <script >
-//import * as apii from './../config';
+import * as apii from './../config';
 export default
   { data() 
         {  return  {    success: '',  errors: [],  record: '',    }
          },
         methods:
-         {     
+         {  addRecord(){
+              axios.post(apii.api.saves1),{ 'name': this.record }
+             .then(response=> { 
+                           this.$emit('recordadded', response.data);
+                           this.success = "Task Added Successfully...";
+                            this.record = '';
+                          
+                        })
+                        .catch(error => this.errors = error.response.data.errors)  
+        },
+         clearmodal() {
+                    this.error = [];
+                    console.log('this.error=', this.error);
+                    this.record = '';
+                    this.success = '';
+                }
+
         }
-        }
+  }
 </script>
 <style type="text/css"scoped>
     
