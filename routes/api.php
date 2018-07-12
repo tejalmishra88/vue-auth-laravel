@@ -14,6 +14,9 @@
 Route::post('authenticate', 'AuthenticateController@authenticate');
 Route::get('getnames1', 'Tasks1Controller@getnames');
 Route::post('saves1', 'tasks1controller@savenames');
+Route::post('tasks5', 'tasks1controller@delete');
+Route::post('editapi', 'tasks1controller@edit');
+Route::post('getrecordbyidapi', 'tasks1controller@getrecordbyid');
 
 Route::group(['middleware' => 'jwt.auth'], function()
 {

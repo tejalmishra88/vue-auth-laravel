@@ -20,4 +20,10 @@ public function savenames(Request $request)
         if($todo3) { return tasks1::all();   }
     }
 }
+public function delete(Request $request)  //delete
+{  $y=$request->input('x');
+   $task1= tasks1::where('id','=',$y)->delete();
+   if($task1)    { return tasks1::all();   
+}
+ }
 }
