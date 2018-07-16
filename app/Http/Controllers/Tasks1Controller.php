@@ -26,4 +26,8 @@ public function delete(Request $request)  //delete
    if($task1)    { return tasks1::all();   
 }
  }
+ public function getrecordbyid(Request $request)  
+    {  $y=$request->input('x');
+       return tasks1::where('id','=',$y)->get();
+    }
 }

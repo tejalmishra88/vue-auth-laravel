@@ -37765,7 +37765,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       console.log('edit-id', this.rec.id);
       console.log('edit-name', this.rec.name);
       console.log('edit-age', this.rec.age);
-      axios.post('http://127.0.0.1:8000/editapi2/', { 'x': this.rec.id, 'y': this.rec.name, 'z': this.rec.age }).then(function (response) {
+      axios.post(apii.api.editapi, { 'x': this.rec.id, 'y': this.rec.name }).then(function (response) {
         console.log('editmodal.vue--updaterec--response.data=', response.data);
 
         _this.$emit('recordUpdated', response.data);

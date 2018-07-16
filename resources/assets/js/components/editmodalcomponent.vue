@@ -38,7 +38,7 @@ export default
                        console.log('edit-id',this.rec.id);
                         console.log('edit-name',this.rec.name);
                         console.log('edit-age',this.rec.age);
-                         axios.post('http://127.0.0.1:8000/editapi2/',{'x':this.rec.id, 'y':this.rec.name,'z':this.rec.age})
+                         axios.post(apii.api.editapi,{'x':this.rec.id, 'y':this.rec.name,})
                             .then ( (response) => {
                                                    console.log('editmodal.vue--updaterec--response.data=',response.data)
                                                  
