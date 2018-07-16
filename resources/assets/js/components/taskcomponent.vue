@@ -51,6 +51,10 @@ import * as apii from './../config';
                             .catch( error => this.errors = error.response.data.errors)
                    }   
                 },
+                  getrecordbyid(t)
+                {  console.log('edit clicked in taskcompoenent, t=',t);
+                   this.editRec =t;
+                }
         },
          
         created() {

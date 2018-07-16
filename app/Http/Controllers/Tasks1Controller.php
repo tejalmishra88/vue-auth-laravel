@@ -30,4 +30,12 @@ public function delete(Request $request)  //delete
     {  $y=$request->input('x');
        return tasks1::where('id','=',$y)->get();
     }
+    public function edit(Request $request)  
+    {   
+      $id=$request->input('x'); 
+        $record =  tasks1::findOrFail($id); 
+         $record->name = $request->input('y');
+        $record->save();  
+        return tasks1::all();
+    }
 }

@@ -36669,6 +36669,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     return _this.errors = error.response.data.errors;
                 });
             }
+        },
+        getrecordbyid: function getrecordbyid(t) {
+            console.log('edit clicked in taskcompoenent, t=', t);
+            this.editRec = t;
         }
     },
 
