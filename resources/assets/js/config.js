@@ -10,4 +10,6 @@ export const api = {
 	getnames1: apiDomain + '/getnames1',
 	saves1: apiDomain + '/savenames',
 	tasks5: apiDomain + '/delete',
+	editapi: apiDomain + '/edit',
+	getrecordbyidapi: apiDomain + '/getrecordbyid',
 };

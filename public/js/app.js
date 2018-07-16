@@ -500,7 +500,9 @@ var api = {
 	updateUserPassword: apiDomain + '/user/password/update',
 	getnames1: apiDomain + '/getnames1',
 	saves1: apiDomain + '/savenames',
-	tasks5: apiDomain + '/delete'
+	tasks5: apiDomain + '/delete',
+	editapi: apiDomain + '/edit',
+	getrecordbyidapi: apiDomain + '/getrecordbyid'
 };
 
 /***/ }),
