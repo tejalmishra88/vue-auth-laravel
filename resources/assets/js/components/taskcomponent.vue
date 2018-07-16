@@ -9,9 +9,9 @@
                         <a class="btn btn-success btn-xs" data-toggle="modal" href="#addmodal">+</a></span> </div>
                      <ul class="list-group">
                             <li class="list-group-item"  v-for= "t in tasks">{{ t.id }} - {{ t.name }} 
-                                <span class="text-right"><button class="btn btn-success">add</button> | 
-                                <button class="btn btn-primary">delete</button> | 
-                                <button class="btn btn-danger">preview</button></span> </li>
+                                <span class="text-right">><a data-toggle="modal" href="#editmodal" class="btn btn-primary" @click="getrecordbyid(t)">edit</a> | 
+                                <button @click="delRecord(t.id)" class="btn btn-success">delete</button> | 
+                                <a class="btn btn-danger" data-toggle="modal" href="#viewmodal" @click="getRecord(t.id)">preview</a></span> </li>
                         </ul>
                     <div class="card-footer text-right"><small>company xyz</small></div>
                 </div>
@@ -24,7 +24,8 @@
 </template>
 
 <script>
-import addmodal from './addmodalcomponent.vue'
+import addmodal from './addmodalcomponent.vue';
+import editmodal from './editmodalcomponent.vue';
 //Vue.component('addtask', require('./addmodalcomponent.vue'));
 import * as apii from './../config';
     export default {
@@ -38,7 +39,20 @@ import * as apii from './../config';
                {// console.log('taskcomponent--refrerecord=',datafromadd);
                 // this.tasks= datafromadd;
                 },
+                delRecord(id) 
+                {  const reply = confirm("Are You sure, you want to delete this record ?");
+                   if(reply)
+                   {   axios.post(apii.api.tasks5,{x:id})
+                            .then(( response) => {console.log('taskcomponent.vue--delrecord response=',response.data)
+                                                 
+                                                   this.tasks = response.data;
+                                                 }
+                                )
+                            .catch( error => this.errors = error.response.data.errors)
+                   }   
+                },
         },
+         
         created() {
              axios.get(apii.api.getnames1)
         .then((response) => {this.tasks = response.data;
