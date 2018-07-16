@@ -32,7 +32,9 @@ import * as apii from './../config';
         components: {
 			'addtask': addmodal
 		},
-        data(){return{tasks:{},}},
+        data(){return{tasks:{}, records:{},
+                   editRec:{}, errors:[],
+                   search:'',}},
         methods:{
 
              refreshRecord(datafromadd)
